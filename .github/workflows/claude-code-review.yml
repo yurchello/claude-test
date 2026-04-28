@@ -30,6 +30,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+      
+      - name: Project setup
+        run:
+          npm run setup
+          npm run dev:deamon
 
       - name: Run Claude Code Review
         id: claude-review
